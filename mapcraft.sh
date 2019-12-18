@@ -8,7 +8,7 @@ WORLD=world-$(date +"%m-%d-%y")
 WORKERS=4
 HOOK=$DHOOK
 MAPHOME="/var/www/html"
-DOMAIN="$DOMAIN:-$IP}"
+DOMAIN="${DOMAIN:-$IP}"
 
 TIMESTAMP=$(date +'%s')
 
