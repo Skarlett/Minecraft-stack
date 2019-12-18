@@ -18,5 +18,5 @@ You may also hook tasks up to cron
 
 crontab -e
 * * */4  *  * systemctl restart minecraft@vanilla
-* 15 12 30 *  DHOOK=discord_webhook DOMAIN="machines IP/domain" /opt/minecraft/mapcraft.sh
+* 15 12 30 *  DHOOK="discord_webhook" DOMAIN="machines IP/domain" /opt/minecraft/mapcraft.sh
 ```
