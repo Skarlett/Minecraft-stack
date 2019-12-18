@@ -24,7 +24,7 @@ discord(){
 
 discord "⚙️️ Reimaging Server ⚙️"
 
-for entry in $(ls .); do
+for entry in $(ls /opt/minecraft); do
   if [[ -d $entry ]] && [[ -e $entry/mapcrafter.cfg ]]; then
     systemctl stop minecraft@$entry
     mapcrafter -b -j $WORKERS -c $entry/mapcrafter.cfg
