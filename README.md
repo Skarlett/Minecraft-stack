@@ -6,6 +6,7 @@ My personal Minecraft stack setup
 + Mapcrafter
 + Nginx
 + Systemd
++ Discord Watcher - quick program to allow stop/start/restart of minecraft from discord
 
 after properly setting up everything - you should be able to control the server with systemd, which should allow for scheduled tasks.
 
