@@ -7,6 +7,7 @@ My personal Minecraft stack setup
 + Nginx
 + Systemd
 + Discord Watcher - quick program to allow stop/start/restart of minecraft from discord
++ rcon
 
 after properly setting up everything - you should be able to control the server with systemd, which should allow for scheduled tasks.
 
@@ -16,7 +17,6 @@ which will then allow you to see the changes from the webserver.
 
 You may also hook tasks up to cron
 ```
-
 crontab -e
 * * */4  *  * systemctl restart minecraft@vanilla
 * 15 12 30 *  DHOOK="discord_webhook" /opt/minecraft/mapcraft.sh

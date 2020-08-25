@@ -1,0 +1,29 @@
+[Unit]
+Description=Minecraft Server %i
+Documentation=
+
+Wants=network.target
+After=network.target
+
+[Service]
+User=minecraft
+Group=minecraft
+#Nice=5
+KillMode=none
+SuccessExitStatus=0 1
+
+#ProtectHome=true
+ProtectSystem=full
+PrivateDevices=true
+NoNewPrivileges=true
+PrivateTmp=true
+InaccessibleDirectories=/root /sys /srv -/opt /media -/lost+found
+
+#ReadWriteDirectories=/opt/minecraft/instance/%i
+WorkingDirectory=/opt/minecraft/instance/%i
+
+ExecStart=/opt/minecraft/scripts/run.sh %i
+ExecStop=/opt/minecraft/scripts/kill.sh %i 
+
+[Install]
+WantedBy=multi-user.target
