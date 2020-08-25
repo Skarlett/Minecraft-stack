@@ -2,7 +2,11 @@
 #################
 # run.sh vanilla
 # NOTE:use systemd instead of this
-
+#################
+# These flags will cause startup of the server to very expensive
+# but in turn the TPS will be much higher
+# this is configured for 20 or less people.
+# if you're allocating more than 12GB refer to mcflags.emc.gs
 FLAGS="
 -XX:+UseG1GC
 -XX:+ParallelRefProcEnabled
