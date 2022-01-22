@@ -23,7 +23,8 @@ InaccessibleDirectories=/root /sys /srv -/opt /media -/lost+found
 WorkingDirectory=/opt/minecraft/instance/%i
 
 ExecStart=/opt/minecraft/scripts/run.sh %i
-ExecStop=/opt/minecraft/scripts/kill.sh %i 
+ExecStop=/usr/local/bin/mcron -H localhost -P 25575 -p 1234 stop
+
 
 [Install]
 WantedBy=multi-user.target
